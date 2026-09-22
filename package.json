@@ -9,7 +9,8 @@
     "start": "tsx --env-file-if-exists=.env src/run.ts",
     "reinstruct": "tsx --env-file-if-exists=.env src/reinstruct.ts",
     "build": "mastra build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/**/*.test.ts"
   },
   "dependencies": {
     "@mastra/core": "^1.63.0",
