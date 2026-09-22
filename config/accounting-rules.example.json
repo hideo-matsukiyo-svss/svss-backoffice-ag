@@ -17,7 +17,8 @@
         "taxCategory": "__MFの税区分名へ変更__"
       },
       "credit": {
-        "account": "未払金"
+        "account": "未払金",
+        "taxCategory": "__MFの税区分名へ変更__"
       },
       "tags": ["立替経費"]
     },
@@ -35,10 +36,10 @@
         "taxCategory": "__MFの税区分名へ変更__"
       },
       "credit": {
-        "account": "未払金"
+        "account": "未払金",
+        "taxCategory": "__MFの税区分名へ変更__"
       },
       "tags": ["受領請求書"]
     }
   ]
 }
-

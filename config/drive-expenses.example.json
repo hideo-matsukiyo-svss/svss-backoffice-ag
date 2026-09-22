@@ -1,0 +1,14 @@
+{
+  "organizationId": "demo-company",
+  "rootFolderId": "REPLACE_WITH_EXPENSE_ROOT_ID",
+  "targetMonth": "2026-09",
+  "people": [{
+    "folderId": "REPLACE_WITH_PERSON_FOLDER_ID",
+    "employee": {
+      "id": "REPLACE_WITH_EMPLOYEE_ID",
+      "name": "サンプル社員",
+      "accountingCounterparty": "REPLACE_WITH_MF_EMPLOYEE_COUNTERPARTY"
+    },
+    "department": "REPLACE_DEPARTMENT"
+  }]
+}

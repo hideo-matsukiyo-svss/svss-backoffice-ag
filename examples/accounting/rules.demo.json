@@ -1,0 +1,14 @@
+{
+  "version": "demo-only-v1",
+  "requireEvidence": true,
+  "requireDepartment": true,
+  "rules": [{
+    "id": "demo-transport",
+    "enabled": true,
+    "priority": 100,
+    "when": { "sourceTypes": ["expense_reimbursement"], "category": "交通費" },
+    "debit": { "account": "旅費交通費", "department": "デモ部門", "taxCategory": "DEMO_TAX" },
+    "credit": { "account": "未払金", "taxCategory": "DEMO_NOT_APPLICABLE" },
+    "tags": ["デモ・本番取込禁止"]
+  }]
+}
