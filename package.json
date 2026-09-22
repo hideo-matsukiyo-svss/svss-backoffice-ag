@@ -13,6 +13,7 @@
     "test": "node --import tsx --test test/*.test.ts",
     "accounting:review": "node --import tsx src/accounting/review-expenses.ts",
     "accounting:scan-drive": "node --env-file-if-exists=.env --import tsx src/accounting/scan-drive-expenses.ts",
+    "accounting:extract": "node --env-file-if-exists=.env --import tsx src/accounting/extract-receipts.ts",
     "accounting:demo": "npm run accounting:review -- --input examples/accounting/expenses.demo.json --rules examples/accounting/rules.demo.json"
   },
   "dependencies": {

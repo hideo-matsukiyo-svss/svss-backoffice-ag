@@ -94,6 +94,10 @@ export function reviewExpenseBatch(input: unknown, configuration: unknown): Expe
       record.fileId, record.lineId);
     const issues: ReviewIssue[] = [];
     const flag = (code: string, message: string) => issues.push({ code, message });
+    if (record.extraction) {
+      flag('EXTRACTION_UNCONFIRMED', 'AIの読取候補です。原本と照合して計上用の値を確定してください');
+      issues.push(...record.extraction.issues.filter((issue) => issue.code !== 'EXTRACTION_UNCONFIRMED'));
+    }
     for (const field of ['transactionDate', 'amount', 'category', 'merchant', 'description', 'department'] as const) {
       if (record[field] === undefined) flag('MISSING_FIELD', `${field}: 証憑の読取・確認が必要です`);
     }

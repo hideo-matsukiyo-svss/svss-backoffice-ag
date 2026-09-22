@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { receiptExtractionSchema } from './receipt-extraction-schema.js';
 
 /** 書式だけでなく、2月30日などの存在しない日付も拒否する。 */
 export function isCalendarDate(value: string): boolean {
@@ -74,6 +75,7 @@ export const expenseRecordSchema = z.object({
   personFolderId: text.optional(),
   personFolderName: text.optional(),
   monthFolderId: text.optional(),
+  extraction: receiptExtractionSchema.optional(),
   employee: z.object({
     id: text,
     name: text,
