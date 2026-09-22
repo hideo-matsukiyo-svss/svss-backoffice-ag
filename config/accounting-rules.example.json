@@ -1,0 +1,44 @@
+{
+  "version": "2026-09-draft",
+  "requireEvidence": true,
+  "requireDepartment": true,
+  "rules": [
+    {
+      "id": "expense-transport-example",
+      "enabled": false,
+      "priority": 100,
+      "when": {
+        "sourceTypes": ["expense_reimbursement"],
+        "category": "交通費"
+      },
+      "debit": {
+        "account": "旅費交通費",
+        "department": "__SVSSの部門名へ変更__",
+        "taxCategory": "__MFの税区分名へ変更__"
+      },
+      "credit": {
+        "account": "未払金"
+      },
+      "tags": ["立替経費"]
+    },
+    {
+      "id": "vendor-invoice-example",
+      "enabled": false,
+      "priority": 100,
+      "when": {
+        "sourceTypes": ["vendor_invoice_email"],
+        "counterparty": "__取引先名へ変更__"
+      },
+      "debit": {
+        "account": "__費用科目へ変更__",
+        "department": "__SVSSの部門名へ変更__",
+        "taxCategory": "__MFの税区分名へ変更__"
+      },
+      "credit": {
+        "account": "未払金"
+      },
+      "tags": ["受領請求書"]
+    }
+  ]
+}
+
