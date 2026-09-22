@@ -1,0 +1,40 @@
+{
+  "organizationId": "demo-company",
+  "sourceSystem": "google_drive",
+  "targetMonth": "2026-09",
+  "currency": "JPY",
+  "records": [
+    {
+      "fileId": "demo-receipt-1",
+      "employee": { "id": "demo-person", "name": "サンプル社員", "accountingCounterparty": "デモ社員取引先" },
+      "transactionDate": "2026-09-10", "amount": 1200,
+      "category": "交通費", "merchant": "デモ鉄道", "description": "顧客訪問の電車代", "department": "デモ部門",
+      "evidence": [{ "uri": "https://example.invalid/receipt-1.pdf", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "documentType": "receipt" }]
+    },
+    {
+      "fileId": "demo-receipt-2",
+      "employee": { "id": "demo-person", "name": "サンプル社員", "accountingCounterparty": "デモ社員取引先" },
+      "transactionDate": "2026-09-11",
+      "category": "交通費", "merchant": "デモ鉄道", "description": "金額の読取待ち", "department": "デモ部門",
+      "evidence": [{ "uri": "https://example.invalid/receipt-2.pdf", "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "documentType": "receipt" }]
+    },
+    {
+      "fileId": "demo-receipt-3",
+      "employee": { "id": "demo-person", "name": "サンプル社員", "accountingCounterparty": "デモ社員取引先" },
+      "transactionDate": "2026-09-12", "amount": 2400,
+      "category": "交通費", "merchant": "デモ鉄道", "description": "重複証憑の例A", "department": "デモ部門",
+      "evidence": [{ "uri": "https://example.invalid/receipt-3.pdf", "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "documentType": "receipt" }]
+    },
+    {
+      "fileId": "demo-receipt-4",
+      "employee": { "id": "demo-person", "name": "サンプル社員", "accountingCounterparty": "デモ社員取引先" },
+      "transactionDate": "2026-09-12", "amount": 2400,
+      "category": "交通費", "merchant": "デモ鉄道", "description": "重複証憑の例B", "department": "デモ部門",
+      "evidence": [{ "uri": "https://example.invalid/receipt-4.pdf", "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "documentType": "receipt" }]
+    },
+    {
+      "fileId": "demo-receipt-5", "transactionDate": "2026-09-31", "amount": 100,
+      "evidence": [{ "uri": "https://example.invalid/receipt-5.pdf", "documentType": "receipt" }]
+    }
+  ]
+}
